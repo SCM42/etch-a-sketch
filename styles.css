@@ -1,6 +1,15 @@
+body { 
+    min-height: 100vh; 
+}
+
+#container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .grid-square {
-    width: 100px;
-    height: 100px;
+    width: 49px;
+    height: 49px;
     border: 1px solid black;
 }
 
