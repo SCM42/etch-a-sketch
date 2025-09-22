@@ -10,10 +10,3 @@ body {
     height: 800px;
     margin: 0 auto;
 }
-
-.grid-square {
-    width: 48px;
-    height: 48px;
-    border: 1px solid black;
-}
-
