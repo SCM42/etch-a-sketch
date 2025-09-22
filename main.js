@@ -7,3 +7,11 @@ for (let i = 0; i < 256; i++) {
 
     parentContainer.appendChild(newSquare);
 }
+
+const squares = document.querySelectorAll(".grid-square");
+
+squares.forEach((square) => {
+    square.addEventListener("mouseenter", () => {
+        square.style.background = "red"
+    }); 
+});
