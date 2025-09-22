@@ -15,3 +15,6 @@ squares.forEach((square) => {
         square.style.background = "grey"
     });
 });
+
+const button = document.querySelector("#btn");
+button.style("margin: 0 auto");
