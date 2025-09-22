@@ -12,6 +12,6 @@ const squares = document.querySelectorAll(".grid-square");
 
 squares.forEach((square) => {
     square.addEventListener("mouseenter", () => {
-        square.style.background = "red"
-    }); 
+        square.style.background = "grey"
+    });
 });
