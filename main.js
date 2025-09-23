@@ -17,7 +17,7 @@ function deleteGrid () {
 }
 
 function calculateSquareSize(input) {
-  return 800 / input - 2;
+  return 788 / input - 2;
 }
 
 function createNewGrid(input, size) {
