@@ -3,7 +3,7 @@ parentContainer.style = "border: 2px solid black";
 const button = document.querySelector("#btn");
 
 button.addEventListener("click", () => {
-  let userInput = parseInt(prompt("Input squares per side for new grid:"));
+  let userInput = getNumberOfSquares();
 
   deleteGrid();
   createNewGrid(userInput, calculateSquareSize(userInput));
@@ -16,8 +16,19 @@ function deleteGrid () {
     }
 }
 
+function getNumberOfSquares () {
+  let userInput = parseInt(prompt("Input squares per side for new grid:"));
+
+  if (userInput > 100) {
+    alert("Can not have input over 100. Grid set to default size of 16 x 16.");
+    userInput = 16;
+  }  
+
+  return userInput;
+}
+
 function calculateSquareSize(input) {
-  return 788 / input - 2;
+  return 800 / input - 2;
 }
 
 function createNewGrid(input, size) {
@@ -28,8 +39,8 @@ function createNewGrid(input, size) {
     newSquare.classList.add("grid-square");
     newSquare.setAttribute(
       "style",
-      `width: ${size}px; height: ${size}px; border: 1px solid black`
-    );
+      `min-width: ${size}px; min-height: ${size}px; border: 1px solid black`
+    ); 
 
     parentContainer.appendChild(newSquare);
   }
