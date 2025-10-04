@@ -39,7 +39,7 @@ function createNewGrid(input, size) {
     newSquare.classList.add("grid-square");
     newSquare.setAttribute(
       "style",
-      `min-width: ${size}px; min-height: ${size}px; border: 1px solid black`
+      `height: ${size}px; border: 1px solid black`
     ); 
 
     parentContainer.appendChild(newSquare);
