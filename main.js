@@ -1,5 +1,11 @@
+const redBorder = document.createElement("div");
+redBorder.style = "height: 800px; width: 800px; border: 45px solid red; border-radius: 25px";
+redBorder.classList.add("redBody");
+document.body.appendChild(redBorder);
+
 const parentContainer = document.querySelector("#container");
-parentContainer.style = "border: 2px solid black";
+redBorder.appendChild(parentContainer);
+
 const button = document.querySelector("#btn");
 
 button.addEventListener("click", () => {
