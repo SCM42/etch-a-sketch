@@ -34,7 +34,7 @@ function getNumberOfSquares () {
 }
 
 function calculateSquareSize(input) {
-  return 800 / input - 2;
+  return 800 / input;
 }
 
 function createNewGrid(input, size) {
@@ -45,7 +45,7 @@ function createNewGrid(input, size) {
     newSquare.classList.add("grid-square");
     newSquare.setAttribute(
       "style",
-      `height: ${size}px; border: 1px solid black`
+      `width: ${size}px`
     ); 
 
     parentContainer.appendChild(newSquare);
