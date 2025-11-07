@@ -56,6 +56,7 @@ function createNewGrid(input, size) {
   squares.forEach((square) => {
     square.addEventListener("mouseenter", () => {
       square.style.background = "grey";
+      square.style.border = "1px solid black";
     });
   }); 
 }
