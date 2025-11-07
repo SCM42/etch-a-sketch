@@ -55,9 +55,23 @@ function createNewGrid(input, size) {
 
   squares.forEach((square) => {
     square.addEventListener("mouseenter", () => {
-      square.style.background = "grey";
+      square.style.background = getRandomRGBColor();
       square.style.border = "1px solid black";
     });
   }); 
+}
+
+// Extra credit functions
+function getRandomRGBColor() {  
+  let red = getRndInteger(0,256);
+  let green = getRndInteger(0,256);
+  let blue = getRndInteger(0,256);
+
+  let rgb = `rgb(${red}, ${green}, ${blue})`;
+  return rgb;
+}
+
+function getRndInteger(min, max) {
+  return Math.floor(Math.random() * (max - min) ) + min;
 }
 //#endregion
